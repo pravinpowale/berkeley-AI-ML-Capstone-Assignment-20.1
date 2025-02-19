@@ -2,7 +2,8 @@
 Initial Report and Exploratory Data Analysis (EDA)
 ### Project Title
 Assessment of the financial health of US banks using AI/ML
-
+### Link to GitHub Repository
+https://github.com/pravinpowale/berkeley-AI-ML-Capstone-Assignment-20.1 
 **Author**
 Pravin Powale
 
@@ -19,9 +20,9 @@ One of the key processes of bank regulation is to monitor the financial health o
 What are you trying to answer?
 Every quarter FDIC publishes 700+ financial ratios of every US bank and makes it available publicly. The main hypothesis is that the financial health of a bank is reflected in these financial ratios, which can be used to build AI/ML models to classify banks into various categories of financial health.
 
-Since labeled data (with financial health categories) is not available publicly, an alternate approach of labeling the quarterly bank data is implemented. This consts of first performing a Principal Component Analysis (PCA) and reducing the dimensionality of the data, by conducting Elbow Analysis of the Sigma array generated during Singular Value Decomposition (SVD). A K-Means clustering with n_clusters = 4 is then performed, to form the clusters of banks. The cluster numbers are then used to label each bank. This labeled data is then used to train a Logistic Regression Model which can be used to predict labels (in other words Financial Health Categories) of banks based upon financial ratios for another quarter.
+Since labeled data (with financial health categories) is not available publicly, an alternate approach of labeling the quarterly bank data is implemented. This consists of first performing a Principal Component Analysis (PCA) and reducing the dimensionality of the data, by conducting Elbow Analysis of the Sigma array generated during Singular Value Decomposition (SVD). A K-Means clustering with n_clusters = 4 is then performed, to form the clusters of banks. The cluster numbers are then used to label each bank. This labeled data is then used to train a Logistic Regression Model which can be used to predict labels (in other words Financial Health Categories) of banks based upon financial ratios for another quarter.
 
-This submission has considered four categories of financial health. Since the cluster numbers do not directly represent the financial health of banks, a standard candle (in other words a well known bank) will be used to determine the "Blue" cluster (high financial health) and the "Red" cluster (High financial Risk). The remaining two clusters will need to be inspected manually or comapared with another source of data to identify which one is Green (Low Risk) and Orange (Medium Risk).
+This submission has considered four categories of financial health. Since the cluster numbers do not directly represent the financial health of banks, a standard candle (in other words a well known bank) will be used to determine the "Blue" cluster (high financial health) and the "Red" cluster (High financial Risk). The remaining two clusters will need to be inspected manually or compared with another source of data to identify which one is Green (Low Risk) and Orange (Medium Risk).
 
 #### Data Sources
 What data will you use to answer you question?
@@ -50,7 +51,7 @@ NOTES
 
 #### Methodology
 What methods are you using to answer the question?
-
+The following steps were executed:
 1. Clean the data source 1 to drop columns that have NaNs. This reduced the columns from 796 to 770
 2. Select bank data corresponding to a quarter
 3. Drop numeric columns "CERT", "REPDTE" and "REPYR" which can cause noise during data analysis. The number of columns now equal 767.
@@ -110,6 +111,7 @@ What suggestions do you have for next steps?
 #### Outline of project
 
 - [Link to notebook 1](https://github.com/pravinpowale/berkeley-AI-ML-Capstone-Assignment-20.1/blob/main/BDA%20-%20Notebook%202.ipynb)
+- Link to GitHub Repository (https://github.com/pravinpowale/berkeley-AI-ML-Capstone-Assignment-20.1)
 
 ##### Contact and Further Information
 
